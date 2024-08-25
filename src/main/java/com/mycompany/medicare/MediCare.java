@@ -1,30 +1,33 @@
 package com.mycompany.medicare;
 
+import Controlador.ControladorPaciente;
 import Modelo.Conexion;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
+import Modelo.Paciente;
+import Modelo.PacienteDAO;
+import Modelo.Vista.RegistroPaciente;
+
 
 public class MediCare {
 
     public static void main(String[] args) {
-         try {
-            MongoDatabase database = Conexion.getBaseDatos();
-            
-            MongoCollection<Document> collection = database.getCollection("Pacientes");
-            Document doc = new Document("nombre", "Juan")
-                                    .append("apellido", "Pérez")
-                                    .append("edad", 30);
+        try {
+            // Inicializa la conexión con la base de datos
+            Conexion.getBaseDatos();
 
-            collection.insertOne(doc);
-            
-            System.out.println("Documento insertado con éxito.");
+            // Instancia las vistas, modelos y controladores
+            RegistroPaciente vista = new RegistroPaciente();
+            PacienteDAO pacienteDAO = new PacienteDAO();
+            ControladorPaciente controlador = new ControladorPaciente(vista, pacienteDAO);
+
+            // Muestra la interfaz gráfica
+            vista.setVisible(true);
+
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error al conectar a MongoDB.");
         } finally {
             // Cerrar la conexión
-            Conexion.close();
+            //Conexion.close();
         }
     }
 }
