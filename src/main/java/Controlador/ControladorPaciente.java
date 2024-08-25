@@ -2,7 +2,7 @@ package Controlador;
 
 import Modelo.Paciente;
 import Modelo.PacienteDAO;
-import Modelo.Vista.RegistroPaciente;
+import Vista.RegistroPaciente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JList;

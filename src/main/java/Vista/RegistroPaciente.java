@@ -1,4 +1,4 @@
-package Modelo.Vista;
+package Vista;
 
 import javax.swing.JButton;
 import javax.swing.JList;
@@ -10,6 +10,7 @@ public class RegistroPaciente extends javax.swing.JFrame {
 
     public RegistroPaciente() {
         initComponents();
+       
     }
 
     @SuppressWarnings("unchecked")
@@ -191,27 +192,7 @@ public class RegistroPaciente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGuardarPacienteActionPerformed
 
-    public static void main(String args[]) {
-        
-        try {
-            // Establece el Look and Feel de Nimbus
-            for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RegistroPaciente().setVisible(true);
-            }
-        });
-    }
-    
+ 
     public JButton getBtnGuardarPaciente() {
         return btnGuardarPaciente;
     }

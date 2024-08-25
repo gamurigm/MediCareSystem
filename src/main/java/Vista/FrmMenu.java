@@ -1,4 +1,6 @@
-package Modelo.Vista;
+package Vista;
+
+import javax.swing.JButton;
 
 
 public class FrmMenu extends javax.swing.JFrame {
@@ -68,10 +70,12 @@ public class FrmMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnRegistarPacienteActionPerformed
 
     private void BtnBuscarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarPacienteActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_BtnBuscarPacienteActionPerformed
 
-    
+    public JButton getBtnRegistrarPaciente(){
+        return  BtnRegistarPaciente;
+    }    
     public static void main(String args[]) {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
