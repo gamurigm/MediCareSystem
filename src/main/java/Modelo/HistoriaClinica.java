@@ -6,25 +6,25 @@ import java.util.*;
 
 public class HistoriaClinica {
     private Paciente paciente;
-    private Map<String, List<VisitaMedica>> visitasMedicas;
+    private Map<String, List<Consulta>> visitasMedicas;
 
     public HistoriaClinica(Paciente paciente) {
         this.paciente = paciente;
         this.visitasMedicas = new HashMap<>();
     }
 
-    public void agregarVisita(String fecha, VisitaMedica visita) {
+    public void agregarVisita(String fecha, Consulta visita) {
         visitasMedicas.putIfAbsent(fecha, new ArrayList<>());
         visitasMedicas.get(fecha).add(visita);
     }
 
-    public List<VisitaMedica> obtenerVisitasPorFecha(String fecha) {
+    public List<Consulta> obtenerVisitasPorFecha(String fecha) {
         return visitasMedicas.getOrDefault(fecha, new ArrayList<>());
     }
 
     // Eliminar una visita médica específica en una fecha
-    public boolean eliminarVisita(String fecha, VisitaMedica visita) {
-        List<VisitaMedica> visitas = visitasMedicas.get(fecha);
+    public boolean eliminarVisita(String fecha, Consulta visita) {
+        List<Consulta> visitas = visitasMedicas.get(fecha);
         if (visitas != null) {
             boolean removed = visitas.remove(visita);
             if (visitas.isEmpty()) {
@@ -35,9 +35,9 @@ public class HistoriaClinica {
         return false;
     }
 
-    public List<VisitaMedica> obtenerTodasLasVisitas() {
-        List<VisitaMedica> todasLasVisitas = new ArrayList<>();
-        for (List<VisitaMedica> visitas : visitasMedicas.values()) {
+    public List<Consulta> obtenerTodasLasVisitas() {
+        List<Consulta> todasLasVisitas = new ArrayList<>();
+        for (List<Consulta> visitas : visitasMedicas.values()) {
             todasLasVisitas.addAll(visitas);
         }
         return todasLasVisitas;

@@ -38,21 +38,17 @@ public class MediCare {
 
         Conexion.getBaseDatos();
 
-        // Crear instancia de vistas y DAO
         menu = new FrmMenu();
         vistaRegistroPaciente = new RegistroPaciente();
         pacienteDAO = new PacienteDAO();
 
-        // Crear controlador
         controladorPaciente = new ControladorPaciente(vistaRegistroPaciente, pacienteDAO);
 
-        // Configurar el botón para abrir la ventana de registro de paciente
         menu.getBtnRegistrarPaciente().addActionListener(e -> {
             vistaRegistroPaciente.setVisible(true);
-            menu.setVisible(false); // Cerrar el menú cuando se abre el registro
+            menu.setVisible(false); 
         });
 
-        // Mostrar el menú
         menu.setVisible(true);
     }
 
