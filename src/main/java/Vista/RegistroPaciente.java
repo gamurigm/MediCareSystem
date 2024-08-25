@@ -34,6 +34,7 @@ public class RegistroPaciente extends javax.swing.JFrame {
         btnGuardarPaciente = new javax.swing.JButton();
         TxtApellidoPaciente = new javax.swing.JTextField();
         lblNombrePaciente1 = new javax.swing.JLabel();
+        BtnAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro de Pacientes");
@@ -91,6 +92,8 @@ public class RegistroPaciente extends javax.swing.JFrame {
 
         lblNombrePaciente1.setText("Apellidos:");
 
+        BtnAtras.setText("Atrás");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -107,7 +110,10 @@ public class RegistroPaciente extends javax.swing.JFrame {
                             .addComponent(lblTelefonoPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(28, 28, 28)
                             .addComponent(TxtTelefonoPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(btnGuardarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnGuardarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addComponent(BtnAtras))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
@@ -140,7 +146,7 @@ public class RegistroPaciente extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel5)
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TxtNombrePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNombrePaciente))
@@ -148,7 +154,7 @@ public class RegistroPaciente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TxtApellidoPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNombrePaciente1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TxtCedulaPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCedulaPaciente))
@@ -169,7 +175,9 @@ public class RegistroPaciente extends javax.swing.JFrame {
                     .addComponent(TxtCorreoPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCorreoPaciente))
                 .addGap(18, 18, 18)
-                .addComponent(btnGuardarPaciente)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGuardarPaciente)
+                    .addComponent(BtnAtras))
                 .addGap(24, 24, 24))
         );
 
@@ -226,9 +234,13 @@ public class RegistroPaciente extends javax.swing.JFrame {
         return TxtCorreoPaciente;
     }
     
+    public JButton getBtnAtras(){
+        return BtnAtras;
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnAtras;
     private javax.swing.JTextField TxtApellidoPaciente;
     private javax.swing.JTextField TxtCedulaPaciente;
     private javax.swing.JTextField TxtCorreoPaciente;

@@ -1,5 +1,7 @@
 package Vista;
 
+import Controlador.ControladorPaciente;
+import Modelo.PacienteDAO;
 import javax.swing.JButton;
 
 
@@ -66,7 +68,8 @@ public class FrmMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnRegistarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistarPacienteActionPerformed
-        // TODO add your handling code here:
+    
+
     }//GEN-LAST:event_BtnRegistarPacienteActionPerformed
 
     private void BtnBuscarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarPacienteActionPerformed
@@ -76,14 +79,7 @@ public class FrmMenu extends javax.swing.JFrame {
     public JButton getBtnRegistrarPaciente(){
         return  BtnRegistarPaciente;
     }    
-    public static void main(String args[]) {
-        
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmMenu().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBuscarPaciente;
